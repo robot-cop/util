@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="swiper-slide">
+			<div data-dom="" data-delay="2000" class="test" data-callback="testfun">
+				来做我温柔的甜心 安静的躺在我的心上不小心我又闯祸了 怎么办
+			</div>
+			<div>
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493972164722&di=d7c69257c204383108e54cd9c5126912&imgtype=0&src=http%3A%2F%2Fsingerimg.kugou.com%2Fuploadpic%2Fpass%2Fsofthead%2F400%2F20160615%2F20160615131516758913.jpg" alt="" />
+			</div>
+			<div data-dom="" class="test">
+				你是我甜蜜的负担 不会让你担心紧张
+			</div>
+
+		</div>
+		<script src="../src/js/libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../src/js/jQuery.typewriter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var container = $('.swiper-slide').eq(0);
+			$.fontTypeAnimate.init();
+			$.fontTypeAnimate.typewriter(container)//传得不能是list
+			//$.fontTypeAnimate.stopwriter(container, true)
+		</script>
+	</body>
+
+</html>

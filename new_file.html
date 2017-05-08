@@ -1,0 +1,19 @@
+<div class="content">
+	<img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1494063640&di=407833fbeec46c879659414e36a70230&src=http://photocdn.sohu.com/20160405/Img443359612.jpg" />
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494073758257&di=ce28263711077aba4eb77c0e3c04fc73&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160725%2Fc8bd4568aadb4d278837479592a91ddd_th.png" alt="" />
+	<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3356984053,2532773883&fm=23&gp=0.jpg" alt="" />
+	<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=219462476,2397409581&fm=23&gp=0.jpg" alt="" />
+</div>
+<script src="../src/libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="../src/imgResize.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$.imgResize({
+		imgListSelector: ".content img",
+		maxWidth: 200,
+		maxHeight: 200,
+		afterResize: function(img) {
+			//当前img对象
+			console.dir(img);
+		}
+	});
+</script>

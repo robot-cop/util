@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../src/css/loading.css" />
+	</head>
+
+	<body>
+
+		<div class="loading ">
+			<div class="load-container ">
+				<div class="loader">
+					<div class="loadinglogo">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		加载完毕
+		<script src="../src/js/libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../src/js/lazyLoad.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.loadProgress({
+				loadingSelector: '.loading',
+				loadingTextSelector: '.loadinglogo span',
+				pageSelector: '.swiper-container',
+				imgList: [
+					'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493972164722&di=d7c69257c204383108e54cd9c5126912&imgtype=0&src=http%3A%2F%2Fsingerimg.kugou.com%2Fuploadpic%2Fpass%2Fsofthead%2F400%2F20160615%2F20160615131516758913.jpg',
+					'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493977472606&di=6b2daab70c939af188af4a5bae758ca2&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160725%2Fc8bd4568aadb4d278837479592a91ddd_th.png',
+					'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493977472603&di=a6ba43f5b486b9867b77171738c62964&imgtype=0&src=http%3A%2F%2Fww2.sinaimg.cn%2Forj480%2Fba594a75jw1f50w0rsf48j25og3sgb2c.jpg',
+					'http://img.kanzhun.com/boss/activity/closestool/music.mp3?v=1'
+				]
+			});
+		</script>
+	</body>
+
+</html>
