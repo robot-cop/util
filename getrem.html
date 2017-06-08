@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<style type="text/css">
+			.c {
+				width: 1.345rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="c">
+			
+		</div>
+		
+		<script type="text/javascript">
+			function getElementStyle(selector) {
+				var element = document.querySelector(selector);
+				return element.currentStyle ? element.currentStyle : window.getComputedStyle(element, null);
+			}
+			function getElementStyleValue(selector, cssAttr, isRem) {
+				var fontSize = parseFloat(getElementStyle('html').fontSize),
+					elementStyle = getElementStyle(selector);
+					value =  parseFloat(elementStyle[cssAttr]),
+					isRem != false?isRem = true:'';
+				if(isRem) {
+					value = (value/fontSize).toFixed(4) + "rem";
+				} else {
+					value = value.toFixed(4)+"px";
+				}
+				console.log(value);
+				return value;
+			}
+			var value1 = getElementStyleValue('.c', 'width');
+			var value2 = getElementStyleValue('.c', 'width', false);
+			console.log(value1,value2);
+		</script>
+	</body>
+
+</html>
