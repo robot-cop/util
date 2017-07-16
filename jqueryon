@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="test">test
+			<a href="">aaa</a>
+		</div>
+		jQueryon(events,[selector],[data],fn)
+		blind()不能给创建的元素加事件，live()是通过事件委托加在document上所以不好，消耗性能，delegate()是通过事件委托加在给祖先元素上
+		live是新版jq废弃的功能，相当于delegate的document版。
+		实际上在常规用途上，你可以认为on和delegate的区别仅仅在于传参数方式不同而已，而bind则是一个进一步删除了冒泡绑定能力的版本。
+		on是bind和delegate的底层实现，后两者是为了在特定场合简化代码或使代码可读性更强的快捷方式，或者说仅仅是为了保留历史兼容性而存在的东西。
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.test').on('click','a',function(e){
+				e.preventDefault();
+				var value = $(this).val();
+				console.log(value);
+				$(this).after('<a>aaa2<a>');
+			})
+		</script>
+	</body>
+</html>
